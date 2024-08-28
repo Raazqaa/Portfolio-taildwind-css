@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas-TailwindCss</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .putar:hover {
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        #about {
+            scroll-margin-top: 80px;
+        }
+        #portfolio{
+            scroll-margin-top: 80px;
+        }
+        #contact{
+            scroll-margin-top: 80px;
+        }
+        .zoom:hover{
+            transform: scale(1.7);
+            transition: transform 0.6s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- header  -->
+     <div class="container-1 ">
+         <header class="header text-white flex justify-between p-5 items-center fixed w-full z-10 border-b-2 backdrop-blur-xl">
+             <div class="font-bold text-3xl">MuFazqa</div>
+             <nav>
+                 <ul class="flex space-x-6 font-bold text-lg">
+                     <li><a class="hover:text-slate-500 transition duration-300" href="#about">About</a></li>
+                     <li><a class="hover:text-slate-500 transition duration-300" href="#portfolio">Portfolio</a></li>
+                     <li><a class="hover:text-slate-500 transition duration-300" href="#contact">Contact</a></li>
+                 </ul>
+            </nav>
+         </header>
+     </div>
+     <!-- Perkenalan -->
+     <div class="container-2 bg-gradient-to-b from-slate-950 via-indigo-900 to-indigo-600">
+        <section class="hero relative mx-auto flex flex-col items-center justify-center text-center h-screen ">
+            <img src="image/muka-4.jpg" class="w-32 h-32 rounded-full object-cover mb-6 border-4 border-white mt-6">
+            <h1 class="text-7xl text-white font-bold mb-4">Hello, I'm Razqa</h1>
+            <h2 class="text-3xl text-gray-300 mb-10">InsyaAllah Jadi Fullstack Developer</h2>
+           <a href="#about"><button class="bg-white p-3 px-8 rounded-lg text-black font-bold shadow-xl hover:bg-slate-900 transition duration-300 hover:text-white">More About Me</button></a>
+        </section>
+        
+     </div>
+     <!-- About -->
+     <div id="about" class="container-3 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-600 pt-20 pb-5">
+        <section class="text-center mx-auto w-[60%]">
+            <h1 class="text-5xl text-white mb-5 font-bold">About Me</h1>
+            <p class="text-gray-300 text-xl font-medium">I'm a new student in Politechnic IDN, still learning about Proggramming and want to get very rich from this occupation, i often to exercise but that was before i entered IDN, its because i'm to lazy in my new place</p>
+            <div class="learning">
+                <div class="text-3xl text-white mt-10 font-bold p-5">What i've Learning</div>
+                
+                <div class="box flex flex-row p-5 w-[70%] mx-auto">
+                    <div class="kotak bg-slate-800 rounded-xl m-5 shadow-lg putar">
+                        <img class="w-[80%] mx-auto flex p-3" src="image/html.png" alt="">
+                    </div>
+
+                    <div class="kotak bg-slate-800  rounded-xl m-5 shadow-lg putar">
+                        <img class="w-[80%] mx-auto flex p-3"src="image/css-3.png" alt="">
+                    </div>
+                    <div class="kotak bg-slate-800  rounded-xl m-5 shadow-lg putar">
+                        <img class="w-[80%] mx-auto flex p-3"src="image/js.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+     </div>
+     <!-- portfolio -->
+    <div id="portfolio" class="container-4 text-center mx-auto bg-slate-300 pb-20 ">
+        <h1 class="text-5xl font-bold text-slate-900 p-10">My Portfolio</h1>
+        <div class="kotak-porto w-[80%] flex mx-auto text-white">
+            <div class="flex flex-col bg-slate-900 rounded-xl overflow-hidden mx-10 shadow-lg zoom">
+                <img src="image/Game-Suit.png" alt="">
+                <h1 class="pt-5 py-5 text-2xl font-bold">Project - 1</h1>
+                <p class="pb-5 w-[70%] mx-auto">This project is the result of my learning from Youtube. Using HTML, CSS, and JavaScript</p>
+            </div>
+
+            <div class="flex flex-col bg-slate-900 rounded-xl overflow-hidden mx-10 shadow-lg zoom">
+                <img src="image/MyPorto.png" alt="">
+                <h1 class="p-5 text-2xl font-bold">Project - 2</h1>
+                <p class="pb-5 w-[70%] mx-auto">This is my first Portfolio created using HTML and CSS</p>
+            </div>
+
+            <div class="flex flex-col bg-slate-900 rounded-xl overflow-hidden mx-10 shadow-lg zoom">
+                <img src="image/pinto.png" alt="">
+                <h1 class="p-5 text-2xl font-bold">Project - 3</h1>
+                <p class="pb-5 w-[70%] mx-auto">This project is just a clone of random website online that I found for learning.</p>
+            </div>
+        </div>
+    </div>
+    <!-- contact  -->
+    <div id="contact" class="container-5 bg-slate-900">
+        <section id="contact" class="w-[50%] mx-auto text-center">
+            <h1 class="text-5xl font-bold text-white p-10">Contact Us</h1>
+            <p class="text-white text-xl font-medium">Let's create something amazing together. Feel free to reach out to me with your ideas or projects.</p>
+            <div class="grid gap-6 sm:grid-cols-2 my-10 w-[100%]">    
+               <input type="text" placeholder="Your Name" class="py-3 px-4 rounded-lg">
+               <input type="email" placeholder="Your Email" class="py-3 px-4 rounded-lg">
+            </div>
+            <textarea placeholder="Your Message" class="p-3 w-[100%] rounded-lg mb-5"></textarea>
+            <div class="tombol">
+                <button type="submit" class="bg-white rounded-lg py-2 px-9 mb-10 font-semibold hover:bg-indigo-700 transition duration-300 hover:text-white">Send Message</button>
+            </div>
+        </section>
+    </div>
+    <div class="container-6">
+        <footer class="bg-slate-950 text-slate-400 text-center mx-auto flex flex-col pt-5 pb-5">
+            <p>&copy;2024 Fadhilah Razqa</p>
+            <div class="w-[50%] flex flex-row mx-auto justify-center pt-4">
+                <a class="mx-2" href="https://www.instagram.com/raazq.aa/" target="_blank"><img src="image/instagram.svg" alt="" class="w-[50px] bg-white p-2 rounded-xl"></a>
+                <a class="mx-2" href="https://www.youtube.com/@razqaa2160" target="_blank"><img src="image/youtube.svg" alt="" class="w-[50px] bg-white p-2 rounded-xl"></a>
+                <a class="mx-2" href="https://www.linkedin.com/in/muhammad-razqa-108871315/" target="_blank"><img src="image/linkedin.svg" alt="" class="w-[60px] bg-white p-2 rounded-xl"></a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
